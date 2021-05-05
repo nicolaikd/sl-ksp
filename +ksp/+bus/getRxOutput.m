@@ -22,6 +22,40 @@ elems(3).Name = 'met';
 elems(3).DataType = 'double';
 elems(3).Description = 'mission elapsed time (s)';
 
+elems(3).Name = 'met';
+elems(3).DataType = 'double';
+elems(3).Description = 'mission elapsed time (s)';
+
+elems(4).Name = 'apoapsisAltitude';
+elems(4).DataType = 'double';
+elems(4).Description = ['The apoapsis of the orbit, in meters, above '  ...
+    'the sea level of the body being orbited.'];
+
+elems(5).Name = 'periapsisAltitude';
+elems(5).DataType = 'double';
+elems(5).Description = ['The periapsis of the orbit, in meters, above '  ...
+    'the sea level of the body being orbited.'];
+
+elems(6).Name = 'timeToApoapsis';
+elems(6).DataType = 'double';
+elems(6).Description = 'Time to apoapsis (s).';
+
+elems(7).Name = 'timeToPeriapsis';
+elems(7).DataType = 'double';
+elems(7).Description = 'Time to periapsis (s).';
+
+elems(8).Name = 'eccentricity';
+elems(8).DataType = 'double';
+elems(8).Description = 'The eccentricity of the orbit.';
+
+elems(9).Name = 'inclination';
+elems(9).DataType = 'double';
+elems(9).Description = 'The inclination of the orbit.';
+
+elems(10).Name = 'orbitalSpeed';
+elems(10).DataType = 'double';
+elems(10).Description = 'Orbital speed (m/s).';
+
 vesselRx = Simulink.Bus;
 vesselRx.Elements = elems;
 vesselRx.Description = 'received vessel data';
@@ -59,14 +93,35 @@ elems(5).Dimensions = 3;
 elems(5).Description = ['Vessel velocity (m/s) in reference frame ' ...
     'vessel.orbit.body.reference_frame'];
 
-% elems(6).Name = 'speed';
-% elems(6).DataType = 'double';
-% elems(6).Dimensions = 1;
-% elems(6).Description = ['Vessel speed (m/s) in reference frame ' ...
-%     'vessel.orbit.body.reference_frame'];
+elems(6).Name = 'pitch';
+elems(6).DataType = 'double';
+elems(6).Dimensions = 1;
+elems(6).Description = ['The pitch of the vessel relative to the '  ...
+    'horizon, in degrees. A value between -90 and +90.'];
+
+elems(7).Name = 'heading';
+elems(7).DataType = 'double';
+elems(7).Dimensions = 1;
+elems(7).Description = ['The heading of the vessel (its angle '     ...
+    'relative to north), in degrees. A value between 0 and 360.'];
+
+elems(8).Name = 'gForce';
+elems(8).DataType = 'double';
+elems(8).Dimensions = 1;
+elems(8).Description = 'The current G force acting on the vessel in g.';
+
+elems(9).Name = 'horizontalSpeed';
+elems(9).DataType = 'double';
+elems(9).Dimensions = 1;
+elems(9).Description = 'Vessel horizontal speed (m/s) in the surface frame.';
+
+elems(10).Name = 'verticalSpeed';
+elems(10).DataType = 'double';
+elems(10).Dimensions = 1;
+elems(10).Description = 'Vessel vertical speed (m/s) in the surface frame.';
 
 % to be continued ...
-%
+
 % see
 % https://krpc.github.io/krpc/python/api/space-center/flight.html
 
