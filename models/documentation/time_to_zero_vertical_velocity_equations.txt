@@ -1,0 +1,18 @@
+Forces causing breaking:
+F_drag
+F_gravity
+
+Total breaking force:
+F_break = F_drag + F_gravity
+
+Force, acceleration relationship:
+F = m * a
+
+Current deaccelration:
+a_break = F_break / m_rocket
+
+Acceleration, veloticy and time relationship:
+a_avg = delta v / delta t = (v - v_0) / t
+
+Approximate time to zero velocity, assuming constant deacceleration:
+t_zvv = a_break / verticalSpeed
