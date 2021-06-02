@@ -30,3 +30,6 @@ slprj/
 *.pdf -crlf -diff -merge
 *.jpg -crlf -diff -merge
 *.png -crlf -diff -merge
+
+# Ignore Python cache
+src/__pycache__/
