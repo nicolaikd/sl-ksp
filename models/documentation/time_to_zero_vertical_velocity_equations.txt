@@ -15,4 +15,4 @@ Acceleration, veloticy and time relationship:
 a_avg = delta v / delta t = (v - v_0) / t
 
 Approximate time to zero velocity, assuming constant deacceleration:
-t_zvv = a_break / verticalSpeed
+t_zvv = verticalSpeed / a_break

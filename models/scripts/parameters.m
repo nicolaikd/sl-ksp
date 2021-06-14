@@ -15,4 +15,4 @@ P_mc_dry_mass_rocket    = 37.397;           %[tons]    Dry mass of rocket - Mass
 
 
 %% Target altitude
-P_x_target          = 1000;             % [m]   Target altitude for hover.
+P_x_target          = 10000;             % [m]   Target altitude for hover.
