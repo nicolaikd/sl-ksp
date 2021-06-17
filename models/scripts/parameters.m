@@ -13,6 +13,19 @@ P_mc_wet_mass_rocket    = 101.197;          %[tons]    Wet mass of rocket - Mass
 P_mc_dry_mass_rocket    = 37.397;           %[tons]    Dry mass of rocket - Mass of rocket with no fuel
 
 
+%% Control %%
+
+%% Deacceleration throttle gain
+P_ctr_deac_throttle_gain = 10;              % [-]?   Depended on time difference: 
 
 %% Target altitude
 P_x_target          = 10000;             % [m]   Target altitude for hover.
+P_t_target          = 200;               % [s]   Initial quess of time in seconds to target height (should be set based on target altitude)
+%{ 
+    Important conditions is that "D_time_to_target_height" is always above "D_time_to_zero_vertical_velocity" in the "acceleration state".
+
+    When engine is ON "D_time_to_zero_vertical_velocity" (acceleration state")  is
+    increasing. 
+%}
+
+%%
