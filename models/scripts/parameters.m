@@ -15,6 +15,10 @@ P_mc_dry_mass_rocket    = 37.397;           %[tons]    Dry mass of rocket - Mass
 
 %% Control %%
 
+%% States
+State_init = 0;
+
+
 %% Deacceleration throttle gain
 P_ctr_deac_throttle_gain = 10;              % [-]?   Depended on time difference: 
 
